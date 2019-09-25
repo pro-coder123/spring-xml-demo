@@ -18,35 +18,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        BeanFactory factory =  new XmlBeanFactory(new FileSystemResource("/home/cgi/Documents/Java/Spring/src/main/resources/beans.xml"));
 
-//        Actor actor = (Actor) factory.getBean("actor");
-//        actor.display();
-
-
-        Movie movie = (Movie) factory.getBean("movie");
-        System.out.println("Using XMLBeanFactory");
-        movie.display();
 
         ApplicationContext app = new ClassPathXmlApplicationContext("beans.xml");
 
 
-
+        System.out.println("Using Autowiring Byname");
         Movie m =  app.getBean("movie",Movie.class);
-        System.out.println("Using ApplicationContext");
 
         m.display();
 
-
-//
-        Actor abc = app.getBean("a1",Actor.class);
-
+        System.out.println("Using Autowiring Constructor");
 
         Movie m1 =  app.getBean("m1",Movie.class);
-        m1.display();
 
-       Movie m2 = app.getBean("m1",Movie.class);
-       System.out.println(m1 == m2);
+        m1.display();
 
 
 
