@@ -38,6 +38,17 @@ public class Main {
         m.display();
 
 
+//
+        Actor abc = app.getBean("a1",Actor.class);
+
+
+        Movie m1 =  app.getBean("m1",Movie.class);
+        m1.display();
+
+       Movie m2 = app.getBean("m1",Movie.class);
+       System.out.println(m1 == m2);
+
+
 
 
 
