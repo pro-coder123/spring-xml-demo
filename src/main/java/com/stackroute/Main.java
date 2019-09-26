@@ -1,6 +1,7 @@
 package com.stackroute;
 
 import com.stackroute.demo.BeanLifecycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.BeanFactory;
@@ -24,7 +25,7 @@ public class Main {
         ApplicationContext app = new ClassPathXmlApplicationContext("beans.xml");
 
 
-        BeanLifecycleDemoBean b = app.getBean("init",BeanLifecycleDemoBean.class);
+        BeanPostProcessorDemoBean b = app.getBean("init",BeanPostProcessorDemoBean.class);
 
 
 
