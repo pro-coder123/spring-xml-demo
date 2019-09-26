@@ -1,5 +1,6 @@
 package com.stackroute;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.BeanFactory;
@@ -23,16 +24,7 @@ public class Main {
         ApplicationContext app = new ClassPathXmlApplicationContext("beans.xml");
 
 
-        System.out.println("Using Autowiring Byname");
-        Movie m =  app.getBean("movie",Movie.class);
-
-        m.display();
-
-        System.out.println("Using Autowiring Constructor");
-
-        Movie m1 =  app.getBean("m1",Movie.class);
-
-        m1.display();
+        BeanLifecycleDemoBean b = app.getBean("init",BeanLifecycleDemoBean.class);
 
 
 

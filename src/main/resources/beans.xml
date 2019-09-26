@@ -15,6 +15,8 @@
 
     <bean id="m1" class="com.stackroute.domain.Movie" autowire="constructor" scope="prototype"></bean>
 
+    <bean id="init" class="com.stackroute.demo.BeanLifecycleDemoBean" scope="singleton" init-method="custominit" destroy-method="customdestroy"></bean>
+
 <!--    <bean id="a1" class="com.stackroute.domain.Actor">-->
 <!--        <constructor-arg name="name" value="abcd"></constructor-arg>-->
 <!--        <constructor-arg name="gender" value="female"></constructor-arg>-->
