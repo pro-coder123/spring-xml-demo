@@ -10,10 +10,10 @@
        <property name="age" value="21"></property>
 
    </bean>
-    <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName"></bean>
+    <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName" scope="prototype"></bean>
 
 
-    <bean id="m1" class="com.stackroute.domain.Movie" autowire="constructor"></bean>
+    <bean id="m1" class="com.stackroute.domain.Movie" autowire="constructor" scope="prototype"></bean>
 
 <!--    <bean id="a1" class="com.stackroute.domain.Actor">-->
 <!--        <constructor-arg name="name" value="abcd"></constructor-arg>-->

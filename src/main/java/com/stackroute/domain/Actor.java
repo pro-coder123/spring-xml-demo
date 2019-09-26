@@ -1,5 +1,8 @@
 package com.stackroute.domain;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
 public class Actor {
 
     private String name,gender;
